@@ -1,0 +1,46 @@
+Code explanation:
+
+1. Classes:
+   - `FoodItem`: This class represents a food item in the restaurant menu. It has attributes such as `food_id`, `name`, `quantity`, `price`, `discount`, and `stock`.
+   - `User`: This class represents a user of the application. It has attributes such as `full_name`, `phone_number`, `email`, and `password`.
+   - `Admin`: This class represents the admin of the application. It has attributes `username` and `password`.
+   - `FoodOrderingApp`: This class represents the main application. It has attributes `food_items` to store the menu items, `users` to store the registered users, 
+	`admin` to store the admin details, and `current_user` to track the current user.
+
+2. Methods:
+   - `admin_login`: This method takes in `username` and `password` as parameters and checks if they match the admin's credentials. 
+	If the credentials are correct, it sets `current_user` to the admin and returns `True`; otherwise, it returns `False`.
+
+   - `user_register`: This method takes in user details (`full_name`, `phone_number`, `email`, and `password`) and creates a new `User` object with the provided information.
+	 The user object is then added to the `users` list.
+
+   - `user_login`: This method takes in user login credentials (`email` and `password`) and checks if they match any registered user's credentials. 
+	If a match is found, it sets `current_user` to the respective user and returns `True`; otherwise, it returns `False`.
+
+   - `add_food_item`: This method takes in food item details (`name`, `quantity`, `price`, `discount`, and `stock`) and creates a new `FoodItem` object with the 
+	provided information.It generates a unique `food_id` and adds the food item to the `food_items` list.
+
+   - `edit_food_item`: This method takes in a `food_id` and food item details (`name`, `quantity`, `price`, `discount`, and `stock`).
+	 It searches for the food item with the given `food_id` and updates its attributes with the new values.
+
+   - `remove_food_item`: This method takes in a `food_id` and removes the food item with the matching `food_id` from the `food_items` list.
+
+   - `view_food_items`: This method iterates over the `food_items` list and prints the details of each food item.
+
+   - `place_order`: This method takes in an array of `selected_items` (food IDs) and calculates the total price of the selected items.
+	 It then displays the selected items along with the total price.
+
+   - `view_order_history`: This method is a placeholder and needs to be implemented. It will handle retrieving and displaying the user's order history.
+
+   - `update_user_profile`: This method takes in user profile details (`full_name`, `phone_number`, `email`, and `password`) and updates 
+	the attributes of the current user with the new values.
+
+3. Usage example:
+   - First, the application object `app` is created.
+   - The admin credentials are set using the `Admin` class.
+   - Admin login is performed using `admin_login` method.
+   - Food items are added to the menu using the `add_food_item` method.
+   - The menu is displayed using the `view_food_items` method.
+   - Food item details are edited using the `edit_food_item` method.
+   - A food item is removed from the menu using the `remove_food_item` method.
+   - The updated menu is
